@@ -7,28 +7,40 @@ window.answers = () => {
     let greeting
     if (hour < 12) {
         greeting = "Good morning"
-    } else {
+    } else if (19 > hour > 12)
         greeting = "Good afternoon"
-    }
+    else 
+        greeting = "Good evening"
 
 
     // #2 This code sets output to true if input is not zero
     // Change the condition so that output will equal true only if input is an even number greater than 20 or an odd number less than 10
     let output = false
-    if (input !== 0) {
+    if (input > 20) {
         output = true
     }
 
 
     // #3 Use a ternary operator (x = cond ? a : b) so that if there is exactly 1 rabbit, this line instead results in "There is 1 rabbit"
     const rabbitString = "There are " +  numRabbits + " rabbits"
-
+    var numRabbits = 1
 
     // #4 Write a for-loop that uses console.log to print out the numbers from 1 to 10 (inclusive) in ascending order
+    let startingNum = 1
+    const tenNums = 10
 
+    for (let i = 1; i <= tenNums; i++) {
+        console.log(startingNum)
+        startingNum = startingNum + 1
+    }
 
     // #5 Write a for-loop that uses console.log to print out the numbers from 1 to 10 (inclusive) in descending order
+    let nextNum = 10
 
+    for (let i = 10; i >= 1; i--) {
+        console.log(nextNum)
+        nextNum = nextNum - 1
+    }
 
     // #6 Write a for-loop that will add up all the positive integers below 100 and store it in the sum variable
     let sum = 0
@@ -70,12 +82,20 @@ window.answers = () => {
 
     // #11 Complete this function so that it returns the product of the three numbers (the three numbers multiplied together)
     function product (num1, num2, num3) {
+        return (num1 * num2 * num3)
 
     }
 
     // #12 Write a function called 'exclaim' that takes a single string and logs it with an exclamation mark after it
     // For example, exclaim("hello") should log "hello!" to the console
+   let hello = "hello"
 
+    function exclaim (string) {
+        return(string + "!")
+    }
+
+    let newGreeting = exclaim (hello)
+    console.log(newGreeting)
 
     // #13 We would like "A", "B", "C", "D", "E" to be printed in the correct order.
     // Make that happen by invoking the right functions in the correct order.
